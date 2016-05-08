@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Test Task</title>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+            <link rel="stylesheet" href="../css/testtask.css">
+    </head>
+    <body>
+        <header id="main_head">
+            <div id="header-div">
+                <h1 id="head-text"> <b> Task Tracker</b></h1>
+                <p id="cap-text"><b>v2.0</b></p>
+            </div>
+        </header>
+        <div id="main_container">
+            <div id="form_container">
+                <div class="int-head" id="task-head-div">
+                    <h3 id="task-head">Create a Task</h3>
+                </div>
+               <form  role="form" name="myForm" >
+                    <div class="input-form-div">
+                        <label for="text">Task Name:</label>
+                        <input type="text" class="input-form" id="task_form" placeholder="Task Name" pattern="[A-Za-z0-9]{5,15}" title="contains letters and number, min 5 , max 15">
+                    </div>
+                    <div class="input-form-div" id="datepicker">
+                        <label for="date">Date:</label>
+                        <input type="date" class="input-form" id="date_form" placeholder="Date">
+                    </div>
+                    <div class="input-form-div">
+                        <label for="assignedto">Assigned To</label>
+                        <input type="text" class="input-form" id="assigned_to" placeholder="Assigned to" pattern="[A-Za-z]{4,20}" title="contains letters, min 4, max 20">
+                    </div>
+                   <div class="input-form-div">
+                    <button type="button" id="submit_btn"> Submit</button>
+                   </div>
+                </form>
+                <p id="test"></p>
+                 <p id="test1"></p>
+                 <p id="test2"></p>
+            </div>
+            <div id="json_container">
+                <div class="int-head">
+                    <h3> Existing Tasks</h3>
+                        <div id="table-container">
+                            <table class="in-table jquery">
+                                <thead>
+                                    <tr>
+                                        <td> Name </td>
+                                        <td> Date</td>
+                                        <td> Assigned to</td>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <footer id="main_footer">
+        </footer>
+    </body>
+    <script src="../js/testtaskjs.js"></script>
+</html>
